@@ -84,8 +84,8 @@ var app = express();
 
 // all environments
 // app.set('port', process.env.PORT || 3000);
-//app.set('port', process.env.VCAP_APP_PORT || 3000);
-app.set('port', process.env.PORT || 3000);
+app.set('port', process.env.VCAP_APP_PORT || 8000);
+// app.set('port', process.env.PORT || 3000);
 //var app = express();
 //app.listen(process.env.VCAP_APP_PORT || 3000);
 
