@@ -9,7 +9,8 @@ var flash = require('connect-flash');
 var mongoose = require('mongoose');
 var passport = require('passport');
 
-var mongoURL = "mongodb://54.186.188.224:27017/test"
+//var mongoURL = "mongodb://54.186.188.224:27017/test"
+var mongoURL = 'mongodb://chanhou:chan3664@ds035310.mlab.com:35310/gg_ccsp'
 
 mongoose.connect(mongoURL, function(err){
   if(err) {
@@ -82,7 +83,11 @@ var app = express();
 // var user = mongoose.model('user'); // TODO [DB] : Get Vote model
 
 // all environments
-app.set('port', process.env.PORT || 3000);
+// app.set('port', process.env.PORT || 3000);
+app.set('port', process.env.VCAP_APP_PORT || 3000);
+//var app = express();
+//app.listen(process.env.VCAP_APP_PORT || 3000);
+
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 // app.use > sequential middleware
