@@ -41,8 +41,8 @@ var userObject = mongoose.model('userObject', new Schema({
           time: String,
           url: String,
           res: [Number]}
-}, {collection : 'test'}));
-
+}, {collection : 'gossip'}));
+//}, {collection : 'test'}));
 
 
   //   userObject.find({id:"email5566"}, function ( err, list ){
