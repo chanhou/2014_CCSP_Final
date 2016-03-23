@@ -13,7 +13,9 @@
   "author": "",
   "license": "ISC",
   "homepage": "https://github.com/oldwang/2014_CCSP_Final",
-  
+  "engines": {
+        "node": "0.10.38"
+    },
   "dependencies": {
     "express": "3.4.8",
     "ejs": "*",
